@@ -9,9 +9,9 @@ exports.renderURLForm = (req, res) => {
 };
 
 exports.run = async (req, res, next) => {
-  const url =
-    "https://www.recode.net/ad/18027288/ai-sustainability-environment";
-  const numSentence = 3;
+  const url = req.query.summarizeURL;
+    //"https://www.recode.net/ad/18027288/ai-sustainability-environment";
+  const numSentence = req.query.numSentences;
   const sentences = [];
   req.query.numSentence = numSentence;
 
